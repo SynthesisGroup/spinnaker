@@ -12,8 +12,8 @@
 		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/slick.css">
 		<link rel="stylesheet" href="assets/css/stylesheet.css">
-		<link rel="stylesheet" href="assets/css/responsive.css">
 		<link rel="stylesheet" href="assets/css/overwrites.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
 	</head>
 
 	<body>
@@ -22,7 +22,7 @@
 			<!-- .container -->
 			<div class="container-fluid h-100">
 				<!-- -->
-				<div class="row align-items-center h-100">
+				<div class="row align-items-center h-100 screen-flex">
 					<!-- -->
 					<div class="col">
 						<!-- -->
@@ -49,10 +49,28 @@
 						<!-- -->
 						<div class="utilities">
 							<ul>
-								<li><a href="#"><i class="fal fa-search"></i></a></li>
+								<li><a href="#" data-bs-toggle="modal" data-bs-target="#modal_search"><i class="fal fa-search"></i></a></li>
 								<li><a href="#" class="btn btn-primary">Book Now</a></li>
 							</ul>
 						</div>
+					</div>
+				</div>
+				
+				<!-- -->
+				<div class="row align-items-center h-100 mobile-flex">
+					<!-- -->
+					<div class="col">
+						<a href="index.html"><img src="assets/img/text-spinnaker-reverse.png" alt="Spinnaker Text" class="img-fluid logo-text" /></a>					
+					</div>
+					
+					<!-- -->
+					<div class="col">
+						<!-- -->
+						<div class="button-menu">
+							<a data-bs-toggle="offcanvas" href="#slide_menu" role="button" aria-controls="slide_menu" class="justify-content-end">
+								<i class="fal fa-bars"></i>
+							</a>
+						</div>						
 					</div>
 				</div>
 			</div>
@@ -810,7 +828,7 @@
 									</div>
 									
 									<!-- -->
-									<div class="slider- slider-thumbnails- carousel-indicators">
+									<div class="slider- slider-thumbnails- carousel-indicators screen-flex">
 										<button data-bs-target="#slider_ground_floor" data-bs-slide-to="0" class="active">
 											<div><img src="assets/img/slides/thumb-facilities-1.jpg" class="img-fluid" alt="" /></div>
 											<div><h5><strong>1 Main Entrance</strong></h5></div>
@@ -903,7 +921,7 @@
 					<!-- -->
 					<div class="col-md-3">
 						<!-- -->
-						<div class="text-center">
+						<div class="text-center mb-50">
 							<h4 class="mb-2"><strong>Development Plan</strong></h4>
 							<p>Total area</p>
 							<h4 class="fc-tan">367.8 sqm ~ 394.1 sqm</h4>
@@ -913,7 +931,7 @@
 					<!-- -->
 					<div class="col-md-3">
 						<!-- -->
-						<div class="text-center">
+						<div class="text-center mb-50">
 							<h4 class="mb-2"><strong>Stay Connected</strong></h4>
 							<p>Follow us on social media</p>
 							<ul class="list-socmed">
@@ -929,7 +947,7 @@
 					<!-- -->
 					<div class="col-md-3">
 						<!-- -->
-						<div class="text-center">
+						<div class="text-center mb-50">
 							<h4 class="mb-2"><strong>Newsletter Sign Up</strong></h4>
 							<p>Sign up for news and special offers</p>
 							
@@ -971,7 +989,7 @@
 						<div class="widget">
 							<h4 class="text-uppercase">Quick Links</h4>
 							<ul class="list-links">
-								<li><a href="#">About</a></li>
+								<li><a href="about.html">About</a></li>
 								<li><a href="#">Amenities</a></li>
 								<li><a href="#">Rooms</a></li>
 								<li><a href="#">Features</a></li>
@@ -1029,10 +1047,79 @@
 			<!-- -->
 			<div class="offcanvas-header justify-content-center">
 				<a href="index.html"><img src="assets/img/logo-spinnaker-reverse.png" class="img-fluid" alt="" width="160" /></a>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
 			
 			<!-- -->
 			<div class="offcanvas-body">
+				<ul class="nav flex-column">
+					<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+					<li class="nav-item">
+						<!-- -->
+						<div class="nav-item-caret">
+							<a class="nav-link" href="#">Amenities</a>
+							<a class="subnav-link" data-bs-toggle="collapse" href="#dropdown_1" role="button"><i class="fas fa-caret-down"></i></a>
+						</div>
+						
+						<!-- -->
+						<div class="collapse subnav" id="dropdown_1">
+							<ul class="nav flex-column">
+								<li class="nav-item"><a class="nav-link" href="#">Ground Floor</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">2nd Floor</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">3rd Floor</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">4th Floor</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Roof Deck</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<!-- -->
+						<div class="nav-item-caret">
+							<a class="nav-link" href="#">Rooms and Units</a>
+							<a class="subnav-link" data-bs-toggle="collapse" href="#dropdown_2" role="button"><i class="fas fa-caret-down"></i></a>
+						</div>
+						
+						<!-- -->
+						<div class="collapse subnav" id="dropdown_2">
+							<ul class="nav flex-column">
+								<li class="nav-item"><a class="nav-link" href="#">Studio Unit</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">2 Bedroom</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">3 Bedroom</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Bi-Level Units</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- Modal: Search -->
+		<div class="modal fade" id="modal_search" tabindex="-1">
+			<!-- -->
+			<div class="modal-dialog modal-dialog-centered">
+				<!-- -->
+				<div class="modal-content">
+					<!-- -->
+					<div class="modal-header">
+						<h4 class="modal-title" id="staticBackdropLabel"><strong>Quick Search</strong></h4>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					
+					<!-- -->
+					<div class="modal-body">
+						<!-- -->
+						<form>
+							<!-- -->
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Enter keyword" id="">
+								<button type="submit" class="btn btn-primary btn-sm"><i class="fal fa-search"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -1064,7 +1151,23 @@
 				infinite: true,
 				slidesToShow: 5,
 				slidesToScroll: 1,
-				arrows: false
+				arrows: false,
+				responsive: [
+					{
+						breakpoint: 768,
+							settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 320,
+							settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
 			});
 			
 			// Slider Awards

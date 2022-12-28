@@ -26,4 +26,5 @@
 .form-group { display: flex; }
 .form-control { border-radius: 0; }
 
-.text-bg-dark { background-color: rgba(28, 28, 28, 1); } 
+.text-bg-dark { background-color: rgba(28, 28, 28, 1) !important; }
+.offcanvas-header .btn-close { position: absolute; right: 30px; top: 30px; color: #FFFFFF !important; }
