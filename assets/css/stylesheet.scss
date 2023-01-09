@@ -8,35 +8,15 @@ h1, h2, h3 { font-family: 'Raleway', sans-serif; }
 h4, h5 { font-family: 'Raleway', sans-serif; }
 
 /* Defaults */
-body { font-size: 0.875rem; line-height: 1.5rem; color: #1C1C1C; overflow-x: hidden; }
+body { font-size: 1rem; line-height: 1.5rem; color: #1C1C1C; overflow-x: hidden; }
 
-/*
-Special
-12px - 0.75rem
-13px - 0.8125rem
-14px - 0.875rem
-18px - 1.125rem
-
-Standard
-16px - 1.0rem
-24px - 1.5rem
-32px - 2.0rem
-40px - 2.5rem
-48px - 3.0rem
-56px - 3.5rem
-64px - 4.0rem
-72px - 4.5rem
-80px - 5.0rem
-*/
-
-h1 { font-size: 4.5rem; line-height: 5.0rem; margin-bottom: 2.5rem; font-weight: bold; }
-h2 { font-size: 4.0rem; line-height: 4.5rem; margin-bottom: 2.0rem; font-weight: bold; }
-h3 { font-size: 2.0rem; line-height: 2.5rem; margin-bottom: 1.5rem; font-weight: bold; }
-h4 { font-size: 1.5rem; line-height: 2.0rem; margin-bottom: 1.5rem; }
-h5 { font-size: 1.0rem; line-height: 1.5rem; margin-bottom: 0; }
-
-p  { font-size: 0.875rem; line-height: 1.5rem; margin-bottom: 1.5rem; }
-li { font-size: 0.875rem; line-height: 1.5rem; }
+h1 { font-size: var(--heading-1); line-height: 5rem; margin-bottom: 3rem; font-weight: bold; }
+h2 { font-size: var(--heading-2); line-height: 4rem; margin-bottom: 2rem; font-weight: bold; }
+h3 { font-size: 2rem; line-height: 3rem; margin-bottom: 1.5rem; font-weight: bold; }
+h4 { font-size: 1.5rem; line-height: 2rem; margin-bottom: 20px; }
+h5 { font-size: 1rem; line-height: 1.5rem; margin-bottom: 0; }
+p  { font-size: 1rem; line-height: 1.5rem; margin-bottom: 20px; }
+li { font-size: 1rem; line-height: 1.5rem; }
 
 a { color: #000000; transition: all 0.3s; text-decoration: none; }
 a img { transition: all 0.3s; }
@@ -51,8 +31,8 @@ table { width: 100%; }
 /* General */
 .hidden { display: none; z-index: -1000 !important; }
 .required { color: red; font-weight: bold; }
-.subscript { text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; font-weight: bold; }
-.supscript { font-size: 0.875rem; font-style: italic; color: #777777; }
+.subscript { text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: bold; }
+.supscript { font-size: 14px; font-style: italic; color: #777777; }
 .bg-shaded { background-color: #f8f8f8; }
 .section { padding-top: 100px; margin-bottom: 100px; }
 
@@ -104,10 +84,6 @@ table { width: 100%; }
 .header.shrink .header-logo a .logo-text { height: 0; }
 
 /* */
-.section-slider p,
-.section-slider h2 { color: #FFFFFF; }
-
-/* */
 .banner { height: 560px; color: #FFFFFF; text-align: center; padding-top: 200px; position: relative; }
 .banner { background-size: cover; background-position: center; }
 .banner .container,
@@ -120,7 +96,7 @@ table { width: 100%; }
 footer { background-color: #1c1c1c; color: #858585; padding: 80px 20px 30px; }
 footer a { color: #93826b; }
 footer a:hover { color: #999999; }
-footer .widget h4 { font-size: 1.125rem; line-height: 1.0rem; font-weight: bold; letter-spacing: 1px; margin-bottom: 30px; }
+footer .widget h4 { font-size: 18px; line-height: 16px; font-weight: bold; letter-spacing: 1px; margin-bottom: 30px; }
 footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top: 40px; margin-top: 30px; text-align: center; }
 
 /* */
@@ -174,11 +150,11 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 
 /* */
 .button-menu a { display: flex; align-items: center; text-transform: uppercase; }
-.button-menu i { font-size: 1.125rem; margin-right: 10px; }
+.button-menu i { font-size: 18px; margin-right: 10px; }
 .button-modals { position: absolute; bottom: 0; left: 0; z-index: 2; }
 
 /* */
-.tabs-default li { margin: 10px 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8125rem; }
+.tabs-default li { margin: 10px 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; }
 .tabs-default a { color: #666666; position: relative; display: inline-block; cursor: pointer; padding: 0; }
 .tabs-default a:before { content: ""; position: absolute; bottom: 0; height: 1px; width: 0; left: 0; transition: ease all 0.3s; }
 .tabs-default a:before { background-color: #93826b; }
@@ -200,7 +176,7 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 .slider-facilities .carousel-item { background-color: #FFFFFF; }
 .slider-facilities .carousel-control { /*position: absolute; bottom: 50%; right: auto; left: auto; display: flex;*/ }
 .slider-facilities .carousel-control-prev,
-.slider-facilities .carousel-control-next { background-color: #93826b; height: 50px; width: 50px; top: 50%; transform: translate(0, -50%); }
+.slider-facilities .carousel-control-next { background-color: #93826b; height: 50px; width: 50px; top: 35%; }
 .slider-facilities .carousel-control-prev { left: -25px; }
 .slider-facilities .carousel-control-next { right: -25px; }
 
@@ -227,24 +203,15 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 /* */
 .form-availability-list,
 .form-availability-list p { color: #858585; }
-.form-availability-list label { color: #858585; font-size: 0.8125rem; text-transform: uppercase; }
+.form-availability-list label { color: #858585; font-size: 13px; text-transform: uppercase; }
 .form-availability-list select { background-color: transparent; color: #FFFFFF; padding: 10px; border-radius: 0 !important; border: 0; }
 .form-availability-list select:focus { box-shadow: 0 0 0; border: 0; }
 .form-availability-list option { border-radius: 0 !important; background-color: rgba(28, 28, 28, 1) !important; }
-
 .form-availability-list .form-block { border-bottom: 1px solid #858585; margin-bottom: 10px; }
-.form-availability-list .form-block:last-child { border-bottom: 0; }
-.form-availability-list .form-check-input[type=checkbox] { height: 20px; width: 20px; margin-right: 20px; background-color: transparent; }
-.form-availability-list .form-check-input[type=checkbox] { border-radius: 0; }
-.form-availability-list .form-check-input[type=checkbox]::focus { outline: 0 0 0; box-shadow: 0 0 0; }
-.form-availability-list .list-default li { margin-bottom: 5px; }
 
 /* */
 .list-room-details { display: flex; list-style: none; padding: 0; margin: 0; }
 .list-room-details li { width: 100%; }
-
-/* */
-.list-default { margin: 0; padding: 0; }
 
 /* Loader */
 .no-js #loader { display: none; }

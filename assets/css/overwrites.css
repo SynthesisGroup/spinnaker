@@ -24,7 +24,20 @@
 
 /* */
 .form-group { display: flex; }
-.form-control { border-radius: 0; }
+.form-control { border-radius: 0; padding: 10px 15px; }
+.form-control::placeholder { font-size: 0.875rem; }
 
 .text-bg-dark { background-color: rgba(28, 28, 28, 1) !important; }
 .offcanvas-header .btn-close { position: absolute; right: 30px; top: 30px; color: #FFFFFF !important; }
+
+/* */
+.input-group.date .form-control { background-color: transparent; padding-right: 50px; border: 0; }
+.input-group.date .form-control::placeholder { color: #FFFFFF; }
+.input-group.date .form-control::focus { outline: 0 0 0; box-shadow: 0 0 0; }
+.input-group.date i { position: absolute; top: 7px; right: 10px; color: #CCCCCC; font-size: 1.25rem; pointer-events: none; }
+
+/* */
+.datepicker td,
+.datepicker th { width: 40px; height: 40px; border-radius: 0; font-size: 13px; border: 1px solid #FFFFFF; background-color: #F1F1F1; }
+.datepicker td:hover,
+.datepicker th:hover { background-color: rgba(28, 28, 28, 1) !important; color: #FFFFFF; }
