@@ -38,9 +38,9 @@ h5 { font-size: 1.0rem; line-height: 1.5rem; margin-bottom: 0; }
 p  { font-size: 0.875rem; line-height: 1.5rem; margin-bottom: 1.5rem; }
 li { font-size: 0.875rem; line-height: 1.5rem; }
 
-a { color: #000000; transition: all 0.3s; text-decoration: none; }
+a { color: #93826b; transition: all 0.3s; text-decoration: none; }
 a img { transition: all 0.3s; }
-a:hover { text-decoration: none; color: #666666; }
+a:hover { text-decoration: none; color: rgba(28, 28, 28, 1); }
 
 hr {}
 blockquote {}
@@ -160,6 +160,7 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 
 /* */
 .bordered-block { position: relative; margin-top: 40px; }
+.bordered-block img { width: 100%; }
 .bordered-block > .row { position: relative; z-index: 2; }
 .bordered-block .slider-nagivate .carousel-control { left: 40px; }
 .bordered-block:before,
@@ -245,6 +246,26 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 
 /* */
 .list-default { margin: 0; padding: 0; }
+
+/* */
+.list-breadcrumbs { padding: 0; margin: 0; list-style: none; }
+.list-breadcrumbs li { display: inline-block; position: relative; color: #FFFFFF; }
+.list-breadcrumbs li:after { content: "|"; margin-left: 5px; margin-right: 5px; color: rgba(225, 225, 225, 0.5); }
+.list-breadcrumbs li:last-child:after { display: none; }
+.list-breadcrumbs li a { color: rgba(225, 225, 225, 0.5); }
+.list-breadcrumbs li a:hover,
+.list-breadcrumbs li span { color: rgba(225, 225, 225, 1); }
+
+/* */
+body.room .header { height: 100px; background-color: rgba(28, 28, 28, 1); }
+body.room .header .header-logo a .logo-icon { height: 60px; }
+body.room .header .header-logo a .logo-text { height: 0; }
+
+body.room .banner { height: 320px; text-align: left; padding-top: 100px; position: relative; }
+body.room .banner .overlay.dark { background-color: rgba(0, 0, 0, 0.50); }
+body.room .banner h2 { color: #FFFFFF; }
+body.room .banner .room-price { text-align: right; }
+body.room .form-block { border-right: 1px solid #858585; }
 
 /* Loader */
 .no-js #loader { display: none; }

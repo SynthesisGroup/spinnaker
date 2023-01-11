@@ -41,3 +41,8 @@
 .datepicker th { width: 40px; height: 40px; border-radius: 0; font-size: 13px; border: 1px solid #FFFFFF; background-color: #F1F1F1; }
 .datepicker td:hover,
 .datepicker th:hover { background-color: rgba(28, 28, 28, 1) !important; color: #FFFFFF; }
+
+/* */
+.table-lg  > :not(caption)>*>* { padding: 15px; }
+.table-tan > :not(caption)>*>* { background-color: #93826b; color: #FFFFFF; }
+.table-tan tr { border-color: rgba(225, 225, 225, 0.2); }
