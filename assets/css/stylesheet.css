@@ -267,6 +267,28 @@ body.room .banner h2 { color: #FFFFFF; }
 body.room .banner .room-price { text-align: right; }
 body.room .form-block { border-right: 1px solid #858585; }
 
+/* */
+.slider-center .slick-slide { border: 1px solid red; margin: 20px; transform: scale(1); transition: ease all 0.3s; }
+.slider-center .slick-center { transform: scale(1.1); }
+.slider-center .slick-arrow { position: absolute; top: calc(50% - 30px); z-index: 1; height: 60px; width: 60px; color: #FFFFFF; display: flex; }
+.slider-center .slick-arrow { background-color: rgba(0, 0, 0, 0.4); justify-content: center; align-items: center; }
+.slider-center .slick-arrow.slide-prev { left: 20px; }
+.slider-center .slick-arrow.slide-next { right: 20px; }
+.slider-center .slick-arrow:hover { background-color: rgba(0, 0, 0, 1); }
+
+/* */
+.deck-style-1 { position: relative; }
+.deck-style-1 .card { position: relative; border-radius: 0; border: 0; }
+.deck-style-1 .card-text { position: absolute; height: 20%; width: 100%; bottom: 0; transition: ease all 0.3s; display: flex; flex-direction: column; }
+.deck-style-1 .card-text { background-color: rgba(147, 130, 107, 0); color: #FFFFFF; text-align: center; justify-content: center; align-items: center; }
+.deck-style-1 .card-desc { opacity: 0; transition: ease all 0.3s; width: 60%; }
+.deck-style-1 .card-name { /*width: 80%;*/ }
+.deck-style-1 .card:before { transform: translate(-50%, -50%); top: 50%; left: 50%; width: calc(100% - 70px); height: calc(100% - 70px); }
+.deck-style-1 .card:before { position: absolute; content: ""; border: 1px solid #FFFFFF;  z-index: 1; }
+.deck-style-1 .card:hover .card-text { height: 100%; background-color: rgba(147, 130, 107, 0.8); }
+.deck-style-1 .card:hover .card-desc { opacity: 1; }
+
+
 /* Loader */
 .no-js #loader { display: none; }
    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
