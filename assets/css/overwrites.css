@@ -46,3 +46,7 @@
 .table-lg  > :not(caption)>*>* { padding: 15px; }
 .table-tan > :not(caption)>*>* { background-color: #93826b; color: #FFFFFF; }
 .table-tan tr { border-color: rgba(225, 225, 225, 0.2); }
+
+/* */
+.table > .thead-dark th { background-color: rgba(28, 28, 28, 1); color: #FFFFFF; }
+.table-lg td, .table-lg th { padding: 1rem; }

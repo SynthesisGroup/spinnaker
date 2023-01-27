@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="assets/css/fontawesome/all.min.css">
 		<link rel="stylesheet" href="assets/css/fontawesome/light.min.css">
 		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/slick.css">
 		<link rel="stylesheet" href="assets/css/stylesheet.css">
 		<link rel="stylesheet" href="assets/css/overwrites.css">
 		<link rel="stylesheet" href="assets/css/responsive.css">
@@ -37,8 +38,8 @@
 						<!-- -->
 						<div class="header-logo">
 							<a href="index.html">
-								<img src="assets/img/icon-spinnaker.png" alt="Spinnaker Icon" class="img-fluid logo-icon" />
-								<img src="assets/img/text-spinnaker.png" alt="Spinnaker Text" class="img-fluid logo-text" />
+								<img src="assets/img/icon-spinnaker-reverse.png" alt="Spinnaker Icon" class="img-fluid logo-icon" />
+								<img src="assets/img/text-spinnaker-reverse.png" alt="Spinnaker Text" class="img-fluid logo-text" />
 							</a>
 						</div>						
 					</div>
@@ -86,7 +87,7 @@
 				<div class="row justify-content-center align-items-center">
 					<!-- -->
 					<div class="col-md-6">
-						<p class="subscript">Club Laiya Amenities</p>
+						<p class="subscript">Amenities</p>
 						<h2>Club Laiya Amenities</h2>
 					</div>
 				</div>
@@ -98,7 +99,7 @@
 			<!-- .container -->
 			<div class="container">
 				<!-- .row -->
-				<div class="row justify-content-center text-center mb-50">					
+				<div class="row justify-content-center text-center mb-50 hidden">					
 					<!-- -->
 					<div class="col-md-8">
 						<p class="subscript fc-tan">The standard Lorem Ipsum passage</p>
@@ -517,31 +518,25 @@
 					</div>
 					
 					<!-- -->
-					<div class="col-md-2">
+					<div class="col-md-4">
 						<!-- -->
 						<div class="widget">
 							<h4 class="text-uppercase">Quick Links</h4>
-							<ul class="list-links">
-								<li><a href="about.html">About</a></li>
-								<li><a href="amenities.html">Amenities</a></li>
-								<li><a href="rooms.html">Rooms</a></li>
-								<li><a href="#">Features</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</div>
-					</div>
-					
-					<!-- -->
-					<div class="col-md-2">
-						<!-- -->
-						<div class="widget">
-							<h4 class="text-uppercase">Rooms</h4>
-							<ul class="list-links">
-								<li><a href="#">Studio Unit</a></li>
-								<li><a href="#">2 Bedroom</a></li>
-								<li><a href="#">3 Bedroom</a></li>
-								<li><a href="#">Bi-Level Units</a></li>
-							</ul>
+							
+							<!-- -->
+							<div class="row">
+								<ul class="list-links col-md-6">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+								
+								<ul class="list-links col-md-6">
+									<li><a href="amenities.html">Amenities</a></li>
+									<li><a href="rooms.html">Rooms and Units</a></li>
+									<li><a href="features.html">Building Features</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					
@@ -590,42 +585,9 @@
 				<ul class="nav flex-column">
 					<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-					<li class="nav-item">
-						<!-- -->
-						<div class="nav-item-caret">
-							<a class="nav-link" href="amenities.html">Amenities</a>
-							<a class="subnav-link" data-bs-toggle="collapse" href="#dropdown_1" role="button"><i class="fas fa-caret-down"></i></a>
-						</div>
-						
-						<!-- -->
-						<div class="collapse subnav" id="dropdown_1">
-							<ul class="nav flex-column">
-								<li class="nav-item"><a class="nav-link" href="#">Ground Floor</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">2nd Floor</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">3rd Floor</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">4th Floor</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">Roof Deck</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="nav-item">
-						<!-- -->
-						<div class="nav-item-caret">
-							<a class="nav-link" href="rooms.html">Rooms and Units</a>
-							<a class="subnav-link" data-bs-toggle="collapse" href="#dropdown_2" role="button"><i class="fas fa-caret-down"></i></a>
-						</div>
-						
-						<!-- -->
-						<div class="collapse subnav" id="dropdown_2">
-							<ul class="nav flex-column">
-								<li class="nav-item"><a class="nav-link" href="#">Studio Unit</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">2 Bedroom</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">3 Bedroom</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">Bi-Level Units</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="amenities.html">Amenities</a></li>
+					<li class="nav-item"><a class="nav-link" href="rooms.html">Rooms and Units</a></li>
+					<li class="nav-item"><a class="nav-link" href="features.html">Building Features</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
 				</ul>
 			</div>
@@ -660,6 +622,7 @@
 		
 		<script src="assets/js/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 	</body>
 </html>
