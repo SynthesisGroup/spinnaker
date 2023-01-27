@@ -112,21 +112,22 @@
 				<div class="row justify-content-center">					
 					<!-- -->
 					<div class="col-md-8">
-						<form class="form-contact">
+						<form id="my-form" action="https://formspree.io/f/moqzjvgl" method="POST" class="form-contact">
+							<p class="text-success" id="my-form-status"></p>
 							<div class="mb-4">
-								<input class="form-control" type="text" placeholder="Full Name*">
+								<input name="fullname" id="fullname" class="form-control" type="text" placeholder="Full Name*" required>
 							</div>
 							<div class="mb-4">
-								<input class="form-control" type="text" placeholder="Email Address*">
+								<input name="email" id="email" class="form-control" type="email" placeholder="Email Address*" required>
 							</div>
 							<div class="mb-4">
-								<input class="form-control" type="text" placeholder="Contact Number">
+								<input name="phone" id="phone" class="form-control" type="text" placeholder="Contact Number" required>
 							</div>
 							<div class="mb-4">
-								<textarea class="form-control" placeholder="Message" rows="5"></textarea>
+								<textarea name="message" id="message" class="form-control" placeholder="Message" rows="5" required></textarea>
 							</div>
 							<div class="mb-4">
-								<button class="btn btn-primary">Submit</button>
+								<button type="submit" class="btn btn-primary" id="my-form-button">Submit</button>
 								<button class="btn btn-secondary">Clear</button>
 							</div>
 						</form>
@@ -350,7 +351,7 @@
 		<script src="assets/js/bootstrap/bootstrap.min.js"></script>
 		<script src="assets/js/slideshow.min.js"></script>
 		<script src="assets/js/slick.min.js"></script>
-		<script src="assets/js/scripts.js"></script>
+	
 		<script>
             // Shrink onScroll
 			$(window).scroll(function() {    
@@ -368,6 +369,46 @@
 				slide: ["assets/img/slides/callout-slide-1.jpg", "assets/img/slides/callout-slide-2.jpg", "assets/img/slides/callout-slide-3.jpg"],
 				delay: [5000, 5000, 5000]
 			});
+    </script>
+	<script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+            }).then(response => {
+            if (response.ok) {
+                status.innerHTML = "Thanks for your submission!";
+                form.reset()
+            } else {
+                response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+                })
+            }
+            }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+
+        // javascript
+        window.onload = function() { 
+            var el = document.getElementById('g-recaptcha-response'); 
+            if (el) { 
+                el.setAttribute('required', 'required'); 
+            } 
+        }
     </script>
 	</body>
 </html>
