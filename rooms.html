@@ -468,53 +468,19 @@
 			</div>
 		</section>
 		
-		<!-- .kneeler -->
-		<section class="kneeler">
+		<!-- -->
+		<section class="section-awards bg-shaded">
 			<!-- .container -->
 			<div class="container">
 				<!-- .row -->
-				<div class="row justify-content-around">
+				<div class="row">
 					<!-- -->
-					<div class="col-md-3">
+					<div class="col-md-12">
 						<!-- -->
-						<div class="text-center mb-50">
-							<h4 class="mb-2"><strong>Development Plan</strong></h4>
-							<p>Total area</p>
-							<h4 class="fc-tan">367.8 sqm ~ 394.1 sqm</h4>
-						</div>
-					</div>
-					
-					<!-- -->
-					<div class="col-md-3">
-						<!-- -->
-						<div class="text-center mb-50">
-							<h4 class="mb-2"><strong>Stay Connected</strong></h4>
-							<p>Follow us on social media</p>
-							<ul class="list-socmed">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					
-					<!-- -->
-					<div class="col-md-3">
-						<!-- -->
-						<div class="text-center mb-50">
-							<h4 class="mb-2"><strong>Newsletter Sign Up</strong></h4>
-							<p>Sign up for news and special offers</p>
-							
-							<!-- -->
-							<form>
-								<!-- -->
-								<div class="form-group">
-									<input type="email" class="form-control" id="">
-									<button type="submit" class="btn btn-primary btn-sm"><i class="fal fa-envelope"></i></button>
-								</div>
-							</form>
+						<div class="slider slider-awards">
+							<div><a href="#" target="_blank"><img src="assets/img/affiliates/logo-landco.png" alt="" /></a></div>
+							<div><a href="#" target="_blank"><img src="assets/img/affiliates/logo-beachtowns.png" alt="" /></a></div>
+							<div><a href="#" target="_blank"><img src="assets/img/affiliates/logo-club-laiya.png" alt="" /></a></div>
 						</div>
 					</div>
 				</div>
@@ -686,19 +652,32 @@
 		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		<script>
-            // Shrink onScroll
-			$(window).scroll(function() {    
-				var scroll = $(window).scrollTop();
-
-				if (scroll >= 200) {
-					$(".header").addClass("shrink");
-				} else {
-					$(".header").removeClass("shrink");
-				}
-			});
-			
 			// Date Picker
 			$('.form-availability-list .input-group.date').datepicker({
+			});
+			
+			// Slider Awards
+			$('.slider-awards').slick({
+				infinite: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				arrows: false,
+				responsive: [
+					{
+						breakpoint: 768,
+							settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 320,
+							settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
 			});
     </script>
 	</body>

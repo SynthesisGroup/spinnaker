@@ -141,7 +141,7 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 /* */
 .callout-slideshow { height: 560px; width: 100%; color: #FFFFFF; text-align: center; position: relative; }
 .callout-slideshow .container,
-.callout-slideshow .row { height: 100%; z-index: 2; }
+.callout-slideshow .container > .row { height: 100%; z-index: 2; }
 
 .callout-fullwidth { height: 480px; width: 100%; position: relative; background-color: #93826b; }
 .callout-fullwidth .container,
@@ -196,22 +196,22 @@ footer .copyright { border-top: 1px solid rgba(225, 255, 255, 0.1); padding-top:
 .slider-nagivate .carousel-control-next { position: static; background-color: #93826b; height: 50px; width: 50px; }
 
 /* */
-.slider-facilities .slider-facilities-text { width: 80%; margin: 30px auto; }
-.slider-facilities .slider-facilities-image { min-height: 480px; background-size: cover; background-position: center; }
-.slider-facilities .carousel-item { background-color: #FFFFFF; }
-.slider-facilities .carousel-control { /*position: absolute; bottom: 50%; right: auto; left: auto; display: flex;*/ }
-.slider-facilities .carousel-control-prev,
-.slider-facilities .carousel-control-next { background-color: #93826b; height: 50px; width: 50px; top: 50%; transform: translate(0, -50%); }
-.slider-facilities .carousel-control-prev { left: -25px; }
-.slider-facilities .carousel-control-next { right: -25px; }
+.slider-rooms .slider-rooms-text { width: 80%; margin: 30px 20px; }
+.slider-rooms .slider-rooms-image { min-height: 480px; background-size: cover; background-position: center; }
+.slider-rooms .carousel-item { background-color: #FFFFFF; }
+.slider-rooms .carousel-control { /*position: absolute; bottom: 50%; right: auto; left: auto; display: flex;*/ }
+.slider-rooms .carousel-control-prev,
+.slider-rooms .carousel-control-next { background-color: #93826b; height: 50px; width: 50px; top: 50%; transform: translate(0, -50%); }
+.slider-rooms .carousel-control-prev { left: -25px; }
+.slider-rooms .carousel-control-next { right: -25px; }
 
 /* */
-.section-facilities > .bordered { position: relative; padding-top: 35px; padding-bottom: 35px; }
-.section-facilities > .bordered:before { top: 0; left: 50px; }
-.section-facilities > .bordered:before { content: ""; position: absolute; height: 100%; width: calc(100% - 100px); border: 1px solid rgba(28, 28, 28, 0.1); }
-.section-facilities .carousel-indicators { position: relative; justify-content: flex-start; padding: 0; margin: 0 50px; }
-.section-facilities .carousel-indicators [data-bs-target] { height: 100%; width: 100%; display: flex; margin: 0; text-indent: inherit; border: 0; background-color: transparent; }
-.section-facilities .carousel-indicators [data-bs-target] > div { width: 50%; padding: 10px; text-align: left; }
+.section-rooms > .bordered { position: relative; padding-top: 35px; /*padding-bottom: 35px;*/ }
+.section-rooms > .bordered:before { top: 0; left: 50px; }
+.section-rooms > .bordered:before { content: ""; position: absolute; height: 100%; width: calc(100% - 100px); border: 1px solid rgba(28, 28, 28, 0.1); }
+.section-rooms .carousel-indicators { position: relative; justify-content: flex-start; padding: 0; margin: 0 50px; }
+.section-rooms .carousel-indicators [data-bs-target] { height: 100%; width: 100%; display: flex; margin: 0; text-indent: inherit; border: 0; background-color: transparent; }
+.section-rooms .carousel-indicators [data-bs-target] > div { width: 50%; padding: 10px; text-align: left; }
 
 /* */
 #slide_menu .nav-item { border-bottom: 1px solid rgba(225, 225, 225, 0.1); }
@@ -282,12 +282,14 @@ body.room .form-block { border-right: 1px solid #858585; }
 .deck-style-1 .card-text { position: absolute; height: 20%; width: 100%; bottom: 0; transition: ease all 0.3s; display: flex; flex-direction: column; }
 .deck-style-1 .card-text { background-color: rgba(147, 130, 107, 0); color: #FFFFFF; text-align: center; justify-content: center; align-items: center; }
 .deck-style-1 .card-desc { opacity: 0; transition: ease all 0.3s; width: 60%; }
-.deck-style-1 .card-name { /*width: 80%;*/ }
+.deck-style-1 .card-name { width: 60%; }
 .deck-style-1 .card:before { transform: translate(-50%, -50%); top: 50%; left: 50%; width: calc(100% - 70px); height: calc(100% - 70px); }
 .deck-style-1 .card:before { position: absolute; content: ""; border: 1px solid #FFFFFF;  z-index: 1; }
 .deck-style-1 .card:hover .card-text { height: 100%; background-color: rgba(147, 130, 107, 0.8); }
 .deck-style-1 .card:hover .card-desc { opacity: 1; }
 
+/* */
+.icon-sustainability { max-width: 80px; margin-bottom: 30px; filter: invert(1); }
 
 /* Loader */
 .no-js #loader { display: none; }
