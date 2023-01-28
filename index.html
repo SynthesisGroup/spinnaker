@@ -1085,7 +1085,7 @@
 				<div class="modal-content">					
 					<!-- -->
 					<div class="modal-body">
-						<video controls>  
+						<video id="video_spinnaker" controls>  
 							<source src="assets/vid/The_Spinnaker_Full_Animation_Low.mp4" type="video/mp4">  
 							Your browser does not support the html video tag.  
 						</video>  
@@ -1153,7 +1153,7 @@
 			
 			// Modal Video Pause on Close Hack
 			$('#modal_video').on('hidden.bs.modal', function () {
-				$('#modal_video video').each(function() {
+				$('#video_spinnaker').each(function() {
 				  this.player.pause();
 				});
 			})
