@@ -104,7 +104,8 @@
 								<div class="carousel-caption col-10">
 									<p class="subscript">Set your sail and start living your dream</p>
 									<h2>New Wave of Luxury Living</h2>
-									<a href="#" data-bs-toggle="modal" data-bs-target="#modal_video" class="btn btn-primary btn-video m-2">Discover More</a>
+									<a href="about.html#spinnaker_video" class="btn btn-primary btn-video m-2">Discover More</a>
+									<!--a href="#" data-bs-toggle="modal" data-bs-target="#modal_video" class="btn btn-primary btn-video m-2">Discover More</a-->
 								</div>
 							</div>
 						</div>						
@@ -123,7 +124,7 @@
 								<div class="carousel-caption col-10">
 									<p class="subscript">Set your sail and start living your dream</p>
 									<h2>New Wave of Luxury Living</h2>
-									<a href="#" data-bs-toggle="modal" data-bs-target="#modal_video" class="btn btn-primary m-2">Discover More</a>
+									<a href="about.html#spinnaker_video" class="btn btn-primary btn-video m-2">Discover More</a>
 								</div>
 							</div>
 						</div>						
@@ -142,7 +143,7 @@
 								<div class="carousel-caption col-10">
 									<p class="subscript">Set your sail and start living your dream</p>
 									<h2>New Wave of Luxury Living</h2>
-									<a href="#" data-bs-toggle="modal" data-bs-target="#modal_video" class="btn btn-primary m-2">Discover More</a>
+									<a href="about.html#spinnaker_video" class="btn btn-primary btn-video m-2">Discover More</a>
 								</div>
 							</div>
 						</div>						
@@ -834,7 +835,7 @@
 			<!-- .container -->
 			<div class="container">
 				<!-- .row -->
-				<div class="row justify-content-around align-items-center">
+				<div class="row justify-content-around align-items-center mb-100">
 					<!-- -->
 					<div class="col-md-4">
 						<p class="subscript fc-tan mb-0">Proudly Pursuing</p>
@@ -870,18 +871,33 @@
 						</div>
 					</div>
 				</div>
+				
+				<!-- .row -->
+				<div class="row justify-content-center">
+					<!-- -->
+					<div class="col-md-12">
+						<!-- -->
+						<div id="spinnaker_video" name="spinnaker_video">
+							<video controls poster="assets/img/home/poster.jpg">  
+								<source src="assets/vid/The_Spinnaker_Full_Animation_Low.mp4" type="video/mp4">  
+								Your browser does not support the html video tag.  
+							</video> 
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		
 		<!-- -->
-		<section class="callout-video" style="background-image: url(assets/img/home/bg-video.png)">
+		<section class="callout-video hidden" style="background-image: url(assets/img/home/bg-video.png)">
 			<!-- .container -->
 			<div class="container position-relative">
 				<!-- .row -->
 				<div class="row justify-content-center align-items-center">
 					<!-- -->
 					<div class="col-md-12 text-center">
-						<a href="#" data-bs-toggle="modal" data-bs-target="#modal_video" class="btn btn-secondary"><i class="fal fa-video"></i></a>
+						<a href="about.html#spinnaker_video" class="btn btn-secondary"><i class="fal fa-video"></i></a>
+						<!--a href="#" data-bs-toggle="modal" data-bs-target="#modal_video" class="btn btn-secondary"><i class="fal fa-video"></i></a-->
 					</div> 
 				</div>
 			</div>
@@ -1142,32 +1158,10 @@
 				});
 			})
 			
-			$(document).ready(function() {
-
-// Gets the video src from the data-src on each button
-
-var $videoSrc;  
-$('.btn-video').click(function() {
-    $videoSrc = $(this).data( "src" );
-});
-console.log($videoSrc);
-
-  
-  
-// when the modal is opened autoplay it  
-$('#modal_video').on('shown.bs.modal', function (e) {
-    
-// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-$("#modal_video video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-})
-  
-
-
-// stop playing the youtube video when I close the modal
-$('#modal_video').on('hide.bs.modal', function (e) {
-    // a poor man's stop video
-    $("#modal_video video").attr('src',$videoSrc); 
-}) 
+			//
+			video.addEventListener('click',function(){
+				video.play();
+			},false);
     	</script>
 	</body>
 </html>
