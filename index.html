@@ -1100,6 +1100,22 @@
 		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				// Get the video element
+				let video = document.getElementById("video_spinnaker");
+	
+				// Play the video when the modal is opened
+				$('#modal_video').on('shown.bs.modal', function () {
+					video.play();
+				});
+	
+				// Pause the video when the modal is closed
+				$('#modal_video').on('hidden.bs.modal', function () {
+					video.pause();
+				});
+			})
+		</script>
+		<script>
 			// Callout Slideshow
 			easy_background(".callout-slideshow", {
 				slide: ["assets/img/slides/callout-slide-1.jpg", "assets/img/slides/callout-slide-2.jpg", "assets/img/slides/callout-slide-3.jpg"],
