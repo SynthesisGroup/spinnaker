@@ -1100,6 +1100,7 @@
 		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		<script>
+			// Stop/Pause Video on Modal Close Hack
 			document.addEventListener('DOMContentLoaded', () => {
 				// Get the video element
 				let video = document.getElementById("video_spinnaker");
@@ -1114,8 +1115,7 @@
 					video.pause();
 				});
 			})
-		</script>
-		<script>
+			
 			// Callout Slideshow
 			easy_background(".callout-slideshow", {
 				slide: ["assets/img/slides/callout-slide-1.jpg", "assets/img/slides/callout-slide-2.jpg", "assets/img/slides/callout-slide-3.jpg"],
@@ -1166,11 +1166,6 @@
 			$('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
 				$('.slider-center').slick('setPosition');
 			})
-			
-			//
-			//video.addEventListener('click',function(){
-			//	video.play();
-			//},false);
     	</script>
 	</body>
 </html>
