@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="assets/css/fontawesome/light.min.css">
 		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="assets/css/lightbox/lightbox.min.css">
 		<link rel="stylesheet" href="assets/css/slick.css">
 		<link rel="stylesheet" href="assets/css/stylesheet.css">
 		<link rel="stylesheet" href="assets/css/overwrites.css">
@@ -88,7 +89,7 @@
 				<div class="row justify-content-center align-items-center">
 					<!-- -->
 					<div class="col-md-6">
-						<p class="subscript">Rooms and Units</p>
+						<p class="subscript hidden">Rooms and Units</p>
 						<h2>Rooms and Units</h2>
 					</div>
 				</div>
@@ -314,7 +315,7 @@
 					<div class="col-md-12">
 						<!-- -->
 						<div class="text-center">
-							<p class="subscript fc-tan">Rooms and Units</p>
+							<p class="subscript fc-tan hidden">Rooms and Units</p>
 							<h2 class="mb-50">Other Curated Units</h2>
 						</div>
 						
@@ -390,6 +391,72 @@
 								</tr>
 							</tbody>
 						</table>
+					</div>
+				</div>
+				
+				<!-- .row -->
+				<div class="row mb-4">
+					<!-- -->
+					<div class="col-md-12">
+						<!-- -->
+						<div class="slider slider-units">
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-1.jpg" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-1.jpg" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-2.jpg" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-2.jpg" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-3.jpg" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-3.jpg" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-4.jpg" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-4.jpg" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-5.jpg" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-5.jpg" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-6.png" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-6.png" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-7.png" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-7.png" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-8.png" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-8.png" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-9.png" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-9.png" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-10.png" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-10.png" class="img-fluid" alt="" />
+								</a>
+							</div>
+							<div>
+								<a href="assets/img/rooms/bi-level/unit-11.png" data-lightbox="slider-units">
+									<img src="assets/img/rooms/bi-level/unit-11.png" class="img-fluid" alt="" />
+								</a>
+							</div>
+							
+						</div>
 					</div>
 				</div>
 				
@@ -1140,8 +1207,38 @@
 		</div>
 		
 		<script src="assets/js/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 		<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+		<script src="assets/js/lightbox/lightbox.min.js"></script>
 		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
+		<script>
+			// Slider Units
+			$(document).ready(function() {
+				$('.slider-units').slick({
+					autoplay: true,
+					infinite: true,
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					arrows: true,
+					prevArrow: '<a href="#" class="slide-arrow slide-prev"><i class="far fa-chevron-left"></i></a>',
+					nextArrow: '<a href="#" class="slide-arrow slide-next"><i class="far fa-chevron-right"></i></a>',
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 3
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1
+							}
+						}
+					]
+				});
+			});
+		</script>
 	</body>
 </html>

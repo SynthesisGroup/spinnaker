@@ -22,8 +22,10 @@
 	.section { padding-top: 50px; margin-bottom: 50px; }
 	.section-slider .carousel-caption h2 { font-size: 3rem; line-height: 3rem; }
 	.section-awards { padding: 50px 0; }
+	.section-rooms > .bordered:before { display: none; }
 	
 	.callout-fullwidth .callout-content { margin: 0 70px; }
+	.callout-fullwidth .callout-image { width: 100%; }
 }
 
 /* 768px */
@@ -50,6 +52,8 @@
 	.section { padding-top: 100px; margin-bottom: 100px; }
 	.section-slider .carousel-caption h2 { font-size: 72px; line-height: 80px; }
 	.section-awards { padding: 100px 0; }
+	.section-rooms > .bordered:before { display: block; }
 	
 	.callout-fullwidth .callout-content { margin: 0; }
+	.callout-fullwidth .callout-image { width: 60%; }
 }

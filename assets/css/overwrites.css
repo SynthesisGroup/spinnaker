@@ -10,7 +10,7 @@
 /* */
 .section-slider .carousel { height: calc(100vh); min-height: 720px; }
 .section-slider .carousel-inner,
-.section-slider .carousel-item { height: 100%; }
+.section-slider .carousel-item { height: 100%; background-position: center; }
 .section-slider .carousel-item .container { position: relative; z-index: 2; }
 
 .section-slider .carousel-caption { position: static; right: auto; bottom: auto; left: auto; padding-top: 0; padding-bottom: 0; color: #000000; text-align: center; }
