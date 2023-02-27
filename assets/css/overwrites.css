@@ -50,3 +50,14 @@
 /* */
 .table > .thead-dark th { background-color: rgba(28, 28, 28, 1); color: #FFFFFF; }
 .table-lg td, .table-lg th { padding: 1rem; }
+
+/* */
+.carousel-menu { position: relative; margin: 0; background-color: #f8f8f8; }
+.carousel-menu [data-bs-target] { width: auto; text-indent: 0; height: auto; padding: 0; background: none; }
+.carousel-menu [data-bs-target] { margin: 10px 15px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8125rem; }
+.carousel-menu a { color: #666666; position: relative; display: inline-block; cursor: pointer; }
+.carousel-menu a:before { content: ""; position: absolute; bottom: 0; height: 1px; width: 0; left: 0; transition: ease all 0.3s; }
+.carousel-menu a:before { background-color: #93826b; }
+.carousel-menu a:hover { color: #93826b; }
+.carousel-menu a.active:before,
+.carousel-menu a:hover:before { width: 100%; }
