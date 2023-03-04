@@ -405,12 +405,45 @@
 			</div>
 		</div>
 		
+		<!-- Modal: Video -->
+		<div class="modal fade modal-fullscreen" id="modal_video" tabindex="-1">
+			<!-- -->
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<!-- -->
+				<div class="modal-content">					
+					<!-- -->
+					<div class="modal-body">
+						<video id="video_spinnaker" controls>  
+							<source src="assets/vid/Landco_Pacific_s_The_Spinnaker_Brief.mp4" type="video/mp4">  
+							Your browser does not support the html video tag.  
+						</video>  
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<script src="assets/js/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/bootstrap/bootstrap.min.js"></script>
 		<script src="assets/js/slideshow.min.js"></script>
 		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
-		<script>
+		<script>			
+			// Stop/Pause Video on Modal Close Hack
+			document.addEventListener('DOMContentLoaded', () => {
+				// Get the video element
+				let video = document.getElementById("video_spinnaker");
+	
+				// Play the video when the modal is opened
+				$('#modal_video').on('shown.bs.modal', function () {
+					video.play();
+				});
+	
+				// Pause the video when the modal is closed
+				$('#modal_video').on('hidden.bs.modal', function () {
+					video.pause();
+				});
+			})
+			
 			// Callout Slideshow
 			easy_background(".callout-slideshow", {
 				slide: ["assets/img/slides/callout-slide-1.jpg", "assets/img/slides/callout-slide-2.jpg", "assets/img/slides/callout-slide-3.jpg"],
